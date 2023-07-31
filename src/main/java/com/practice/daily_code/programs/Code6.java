@@ -10,7 +10,7 @@ public class Code6 {
         int input[]= {5, 4, 5, 5, 3, 1, 2, 2, 4};
         int output[]= new int[input.length];
 //        expected output = { 1, 1, 1, 2, 2, 3 }
-//        expected output = {5, 5, 5, 4, 4, 3, 1, 2, 2 }
+//        expected output = {5, 5, 5, 4, 4, 3, 1, 2, 2 } 5, 4, 5, 5, 3, 1, 2, 2, 4
         HashSet<Integer> hSet= new LinkedHashSet<>();
         for(int x: input)
         {
@@ -18,15 +18,20 @@ public class Code6 {
         }
         int temp=0;
         int j=0;
-        Iterator it= hSet.iterator();
-        while (it.hasNext())
+        if(input.length==hSet.size())
         {
-            temp= (int) it.next();
-            for (int i = 0; i < input.length; i++) {
-                if(temp==(input[i]))
-                {
-                    output[j]=input[i];
-                    j++;
+            output=input;
+            System.out.println("all unique");
+        }
+        else {
+            Iterator it = hSet.iterator();
+            while (it.hasNext()) {
+                temp = (int) it.next();
+                for (int i = 0; i < input.length; i++) {
+                    if (temp == (input[i])) {
+                        output[j] = input[i];
+                        j++;
+                    }
                 }
             }
         }
