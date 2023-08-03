@@ -40,7 +40,7 @@ public class Code8 {
             }
             if(!flag)
             {
-                System.out.println("No match found :: "+taskArr[i][0]);
+                System.out.println("No match found for task with profit :: "+taskArr[i][0]);
             }
         }
 //        for(Integer i[]: taskArr)
