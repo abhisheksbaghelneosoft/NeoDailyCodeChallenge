@@ -14,24 +14,12 @@ public class code10 {
             {
                 if(pos[j]==i)
                 {
-                    System.out.println("pos[j] :: "+pos[j]+"   "
-                            + "nums[j] :: "+nums[j]+"  pos[pos[j]] :: "
-                            +pos[pos[j]]+"  nums[pos[j]] :: "+nums[pos[j]]);
                     tempPos=pos[j];
                     tempNums=nums[j];
                     nums[j]=nums[pos[j]];
                     nums[pos[j]]=tempNums;
                     pos[j]=pos[pos[j]];
                     pos[tempPos]=tempPos;
-                    System.out.println("nums :");
-                    for(int x: nums)
-                        System.out.print(x+" ");
-                    System.out.println();
-                    System.out.println("pos :");
-                    for(int x: pos)
-                        System.out.print(x+" ");
-                    System.out.println();
-
 
                     break;
 
