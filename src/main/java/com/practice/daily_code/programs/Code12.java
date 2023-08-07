@@ -4,46 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Code12 {
-
-    //trying recursion
-
-//    public static List<ArrayList<Integer>> findCombination(List<ArrayList<Integer>> list,int arr[],int k,int count){
-//        if(count==0)
-//        {
-//            return list;
-//        }
-//        else {
-//            int i = k;
-//            for (int j = 0; j < arr.length; j++) {
-//                ArrayList<Integer> arrList = new ArrayList<>();
-//                while (i > 0) {
-//                    arrList.add(arr[j]);
-//                    i--;
-//                }
-//                list.add(arrList);
-//            }
-//            return findCombination(list, arr, k, count - 1);
-//        }
-//    }
-
     public static void main(String[] args) {
-
         int input[]= {1, 2, 3, 4};
-        int k=4;
-        List<ArrayList<Integer>> list= new ArrayList<>();
+        int k=1;
 
-//        on k=2 expected output= {1, 1}, {1, 2}, {1, 3}, {1, 4}, {2, 2}, {2, 3}, {2, 4}, {3, 3}, {3, 4}, {4, 4}
-
-        if(k==2)
+        if(k==1)
         {
+            for (int i = 0; i < input.length; i++) {
+                System.out.println(input[i]);
+            }
+        } else if (k==2) {
             for (int i = 0; i <input.length; i++) {
                 for (int j = i; j < input.length; j++) {
                     System.out.println("{ "+input[i]+","+input[j]+" }  ");
                 }
             }
-        }
-
-        else {
+        } else if(k>2 && k<=input.length) {
+            List<ArrayList<Integer>> list= new ArrayList<>();
             for (int i = 0; i < input.length; i++) {
                 for (int j = 0; j < input.length; j++) {
                     ArrayList<Integer> arrayList = new ArrayList<>();
@@ -65,8 +42,9 @@ public class Code12 {
                 System.out.println();
             }
         }
-
-
+        else {
+            System.out.println("Can't make the set of numbers greater than the length of input array!!");
+        }
     }
 
 }
