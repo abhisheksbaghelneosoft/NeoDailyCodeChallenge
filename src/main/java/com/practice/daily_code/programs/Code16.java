@@ -1,5 +1,7 @@
 package com.practice.daily_code.programs;
 
+import java.util.Arrays;
+
 public class Code16 {
 
     public static void main(String[] args) {
@@ -23,6 +25,9 @@ public class Code16 {
             }
         }
         for (int i = 0; i < n; i++) {
+
+//            System.out.println(Arrays.toString(arr[i]));
+
             for (int j = 0; j <n-i-1 ; j++) {
                 System.out.print(" ");
             }

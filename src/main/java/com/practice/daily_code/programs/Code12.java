@@ -6,7 +6,7 @@ import java.util.List;
 public class Code12 {
     public static void main(String[] args) {
         int input[]= {1, 2, 3, 4};
-        int k=1;
+        int k=3;
 
         if(k==1)
         {
