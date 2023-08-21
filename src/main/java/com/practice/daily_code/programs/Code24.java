@@ -1,7 +1,6 @@
 package com.practice.daily_code.programs;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Code24 {
@@ -26,6 +25,9 @@ public class Code24 {
                 .forEach((x,y)->{
                     System.out.println(x+" : : "+y.size());
                 });
+//        Set<String> set= ls.stream().collect(Collectors.toSet());
+        Map mp=ls.stream().distinct().collect(Collectors.toMap(p->p, p->p.length()));
+        System.out.println(mp);
 
 //        ls.stream().collect(Collectors.joining(","));
     }
