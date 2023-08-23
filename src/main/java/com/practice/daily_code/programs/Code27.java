@@ -4,11 +4,11 @@ public class Code27 {
 
     public static void main(String[] args) {
 
-        int n= 0;
+        int n= -20 ;
         int m=5;
         int min= 0;
         int max= 0;
-        int temp=0;
+        int temp;
 
         if(n==0)
         {
