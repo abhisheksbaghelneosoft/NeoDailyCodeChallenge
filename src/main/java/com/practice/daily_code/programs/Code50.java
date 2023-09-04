@@ -33,7 +33,6 @@ public class Code50 {
                 high=mid;
             }
         }
-
         if(arr[mid]!=n)
         {
             return -1;
